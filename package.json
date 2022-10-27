@@ -8,12 +8,15 @@
     "dev:watch": "nodemon ./index.js",
     "dev:ui": "npx browser-sync start --proxy=localhost:8000 --files='**/*.css, **/*.pug, **/*.js' --ignore=node_modules --reload-delay 10 --no-ui --no-notify --no-open",
     "dev-host": "nodemon ./index.js",
-    "dev-docker": "npm-run-all --parallel dev:*"
+    "dev-docker": "npm-run-all --parallel dev:*",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "express": "^4.17.1",
     "morgan": "^1.10.0",
-    "pug": "^3.0.0"
+    "pug": "^3.0.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
@@ -22,5 +25,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "snyk": true
 }
