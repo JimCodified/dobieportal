@@ -16,7 +16,7 @@
     "express": "^4.17.1",
     "morgan": "^1.10.0",
     "pug": "^3.0.1",
-    "@snyk/protect": "latest"
+    "@snyk/protect": "1.1047.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
